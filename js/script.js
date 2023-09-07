@@ -7,6 +7,7 @@ const personalData = {
 // document.getElementById("slackUsername").innerHTML = personalData.slackName;
 // document.getElementById("myTrack").innerHTML = personalData.currentTrack;
 // document.getElementById("githubURL").innerHTML = personalData.githubURL;
+// document.getElementById("testingstuff").innerHTML = "testing stuff";
 
 const currentTime = () => {
   const now = new Date();
@@ -35,10 +36,11 @@ const currentTime = () => {
   //   document.body.innerHTML =
   //     "<h3>Today's date is " + formattedDateTime + "</h3>";
 
-  document.getElementById("time").innerHTML =
+  document.getElementById("currentUTCTime").innerHTML =
     "<h3>Today's date is " + formattedDateTime + "</h3>";
 
-  document.getElementById("currentDayOfTheWeek").innerHTML = weekday;
+  document.getElementById("currentDayOfTheWeek").innerHTML =
+    "<h3>" + weekday + "</h3>";
   let t = setTimeout(function () {
     currentTime();
   }, 1000);
