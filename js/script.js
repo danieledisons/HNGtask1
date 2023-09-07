@@ -41,7 +41,7 @@ const currentTime = () => {
     "<h3>Current UTC time " + formattedDateTime + "</h3>";
 
   document.getElementById("currentDayOfTheWeek").innerHTML =
-    "<h3> Current Day of the week" + weekday + "</h3>";
+    "<h3> Current Day of the week: " + weekday + "</h3>";
   let t = setTimeout(function () {
     currentTime();
   }, 1000);
