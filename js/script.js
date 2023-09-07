@@ -27,7 +27,8 @@ const currentTime = () => {
   const minutes = now.getUTCMinutes();
   const seconds = now.getUTCSeconds();
   const weekday = weekdayNames[now.getUTCDay()];
-  const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  //   const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  const formattedDateTime = `${hours}:${minutes}:${seconds}`;
 
   //   document.getElementById("date-time").innerHTML = personalData.slackName;
   //   document.getElementById("slackUsername").innerHTML =
@@ -37,10 +38,10 @@ const currentTime = () => {
   //     "<h3>Today's date is " + formattedDateTime + "</h3>";
 
   document.getElementById("currentUTCTime").innerHTML =
-    "<h3>Today's date is " + formattedDateTime + "</h3>";
+    "<h3>Current UTC time " + formattedDateTime + "</h3>";
 
   document.getElementById("currentDayOfTheWeek").innerHTML =
-    "<h3>" + weekday + "</h3>";
+    "<h3> Current Day of the week" + weekday + "</h3>";
   let t = setTimeout(function () {
     currentTime();
   }, 1000);
