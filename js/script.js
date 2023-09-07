@@ -4,11 +4,6 @@ const personalData = {
   githubURL: "https://github.com/danieledisons",
 };
 
-// document.getElementById("slackUsername").innerHTML = personalData.slackName;
-// document.getElementById("myTrack").innerHTML = personalData.currentTrack;
-// document.getElementById("githubURL").innerHTML = personalData.githubURL;
-// document.getElementById("testingstuff").innerHTML = "testing stuff";
-
 const currentTime = () => {
   const now = new Date();
   const weekdayNames = [
@@ -30,27 +25,17 @@ const currentTime = () => {
   //   const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
   const formattedDateTime = `${hours}:${minutes}:${seconds}`;
 
-  //   document.getElementById("date-time").innerHTML = personalData.slackName;
-  //   document.getElementById("slackUsername").innerHTML =
-  //     "<p>Slack username is </p> + personalData.slackUsername";
-
-  //   document.body.innerHTML =
-  //     "<h3>Today's date is " + formattedDateTime + "</h3>";
+  const utcTimestamp = new Date().getTime();
+  console.log(utcTimestamp);
 
   document.getElementById("currentUTCTime").innerHTML =
-    "<h3>Current UTC time " + formattedDateTime + "</h3>";
+    "<h3>Current UTC time " + utcTimestamp + "</h3>";
 
   document.getElementById("currentDayOfTheWeek").innerHTML =
     "<h3> Current Day of the week: " + weekday + "</h3>";
   let t = setTimeout(function () {
     currentTime();
   }, 1000);
-
-  //   console.log(formattedDateTime);
 };
 
 currentTime();
-
-// console.log(weekday);
-
-// document.getElementById("slackUsername").innerHTML = personalData.slackName;
